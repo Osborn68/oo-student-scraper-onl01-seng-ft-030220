@@ -7,6 +7,7 @@ class Scraper
     doc = Nokogiri::HTML(open(index_url))
     
     students = []
+<<<<<<< HEAD
    
     doc.css("div.student-card").each do |student|
       name = student.css(".student-name").text
@@ -18,6 +19,17 @@ class Scraper
    return students
      
      #binding.pry
+=======
+    
+    #scrape student page for, :name,:location,:profile_url
+    #use scraped information to return a return of hashes.
+    
+    
+    binding.pry
+    doc.css("div.student-card").each do |student|
+      name = doc.css("student-name").text
+      location = doc.css("student-location").text
+>>>>>>> aa0e348974d2d2be6bdb0db6117a6f1280279300
   end
 
 
@@ -54,3 +66,7 @@ class Scraper
     
   end
 end
+<<<<<<< HEAD
+=======
+end
+>>>>>>> aa0e348974d2d2be6bdb0db6117a6f1280279300
